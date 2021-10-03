@@ -24,6 +24,10 @@ describe("Totalizador ", () => {
   it("deberia calcular para un estado AL", () => {
     expect(calcularTotal(3, 2, "AL")).toEqual(6.24);
   });
+  it("deberia mostrar precioTotal con impuestos y descuentos por defecto", () => {
+    expect(calcularTotal(30000,1,"UT")).toEqual(4799.25);
+
+  });
   
 });
 

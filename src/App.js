@@ -9,10 +9,14 @@ function impuestoEstado(estado) {
   return impuestos[estado];
 }
 
+
 function calcularTotal(cantidad, precio, estado) {
   let subTotal = cantidad * precio;
   let impuesto = impuestoEstado(estado);
-  subTotal = subTotal + subTotal * impuesto;
-  return subTotal;
+  let subTotal_impuesto = subTotal *(1+impuesto);
+  if (subTotal_impuesto>=1000){
+    return subTotal_impuesto*0.15;
+  }
+  return subTotal_impuesto;
 }
 export default calcularTotal;
