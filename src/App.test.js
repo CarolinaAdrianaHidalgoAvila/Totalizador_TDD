@@ -24,8 +24,24 @@ describe("Totalizador ", () => {
   it("deberia calcular para un estado AL", () => {
     expect(calcularTotal(3, 2, "AL")).toEqual(6.24);
   });
-  it("deberia mostrar precioTotal con impuestos y descuentos por defecto", () => {
-    expect(calcularTotal(30000,1,"UT")).toEqual(4799.25);
+  it("deberia mostrar precioTotal con impuestos y descuento por defecto para 30000", () => {
+    expect(calcularTotal(30000,1,"UT")).toEqual(27195.75);
+
+  });
+  it("deberia mostrar precioTotal con impuestos y descuento para 3000", () => {
+    expect(calcularTotal(3000,1,"AL")).toEqual(2964);
+
+  });
+  it("deberia mostrar precioTotal con impuestos y descuento para 10000", () => {
+    expect(calcularTotal(10000,1,"TX")).toEqual(9562.5);
+
+  });
+  it("deberia mostrar precioTotal con impuestos y descuento para 7000", () => {
+    expect(calcularTotal(7000,1,"NV")).toEqual(7030.8);
+
+  });
+  it("deberia mostrar precioTotal con impuestos y descuento para 1000", () => {
+    expect(calcularTotal(1000,1,"CA")).toEqual(1050.025);
 
   });
   
